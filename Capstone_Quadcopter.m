@@ -1,8 +1,27 @@
-%% 
+%% DRONE CONTROL for AUTONOMOUS DELIVERY SYSTEM
+% *UNIVERSITY OF TECHNOLOGY SYDNEY*
+% *FACULTY OF ENGINEERING AND INFORMATION TECHNOLOGY*
+% Student name (Author): LE, Hoang Trung
+% Student ID number: 13993807
+% Project number: AUT-22-07547
+% Major: Mechatronic Engineering
+
+%% INITIALISATION
+... struggling
 clear;    clc;
 addpath(genpath('./Addition'));     % Include required files in separate folder
+
+quadParams = ReadProperty("CloverProp.pdf");
+initState = zeros(12,1);
+initInput = zeros(4,1);
+simTime = 20;
+
 %% INITIALISATION
 
+quad = Quadcopter(quadParams, initState, initInput, simTime);
+quad.Model3D('CloverAssemblyP.PLY');
+
+%%
 % Translational
 % Linear translation force
 syms F1 F2 F3 F4 thrust
@@ -98,7 +117,7 @@ rot_ext = tau + tau_gyb + tau_gyp - tau_air;
 F_ext = [trl_ext; tau];
 
 EL = Lqd - Lq == F_ext;     % Euler-Lagrange equation
-disp(EL)
+% disp(EL)
 
 %%
 C = sym(zeros(3));
@@ -204,24 +223,24 @@ end
 % disp(q2d_result)
 
 %% Animation
-figure(1)
+% figure(1)
+% % axis equal
+% % axis([-500 1000 -500 500 -200 8000]);
+% view(3)
+% %%
+% % v = VideoWriter('CloverAnimation.avi');
+% % open(v);
+% Clover = PlaceObj('Clover2.PLY');
 % axis equal
-% axis([-500 1000 -500 500 -200 8000]);
-view(3)
-%%
-% v = VideoWriter('CloverAnimation.avi');
-% open(v);
-Clover = PlaceObj('Clover2.PLY');
-axis equal
-axis([-500 2500 -500 500 -200 3000]);
-%%
-for i = 1:wayPoints
-%     hold on
-    Clover.MoveObj(1000*[x(i) y(i) z(i) phiNum(i) ttaNum(i) psiNum(i)]);
-    pause(0.1);
+% axis([-500 2500 -500 500 -200 3000]);
+% %%
+% for i = 1:wayPoints
+% %     hold on
+%     Clover.MoveObj(1000*[x(i) y(i) z(i) phiNum(i) ttaNum(i) psiNum(i)]);
+%     pause(0.1);
 % frame = getframe(gcf);
 % writeVideo(v,frame);
-end
+% end
 % close(v);
 %% Functions
 

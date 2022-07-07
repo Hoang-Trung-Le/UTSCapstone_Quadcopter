@@ -78,5 +78,6 @@ Coriolis
 a = ReadProperty("CloverProp.pdf")
 a.values
 a.keys
+%%
 
 

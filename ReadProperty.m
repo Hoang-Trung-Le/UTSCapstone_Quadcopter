@@ -3,7 +3,8 @@ function map = ReadProperty(document)
 %   Detailed explanation goes here
 
 str = extractFileText(document);
-mass = double(extractBetween(str, "Mass = ", " kilograms"));
+l = 0.1173;
+m = double(extractBetween(str, "Mass = ", " kilograms"));
 Ixx = double(extractBetween(str, "Px = ", " "));
 Iyy = double(extractBetween(str, "Py = ", " "));
 Izz = double(extractBetween(str, "Pz = ", lettersPattern));
@@ -11,8 +12,8 @@ if Ixx ~= Iyy
     Iyy = Ixx;
 end
 
-keySet = {'mass', 'Ixx', 'Iyy', 'Izz'};
-valueSet = [mass, Ixx, Iyy, Izz];
+keySet = {'mass', 'armLength', 'Ixx', 'Iyy', 'Izz'};
+valueSet = [m, l, Ixx, Iyy, Izz];
 map = containers.Map(keySet, valueSet);
 
 end

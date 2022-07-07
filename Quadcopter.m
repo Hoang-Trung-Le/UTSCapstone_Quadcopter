@@ -8,7 +8,7 @@ classdef Quadcopter < handle
     % Parameters and kinematic variables
     properties
         g           % gravity
-        t           % current time stamp
+        t           % current time stamp (percentage in total sim time)
         dt          % time interval
         tf          % total simulation time
         
@@ -17,10 +17,10 @@ classdef Quadcopter < handle
         I           % moment of inertia matrix
         
         q           % q (X, Y, Z, dX, dY, dZ, phi, theta, psi, p, q, r) state variables previously "x"
-        r           %(X, Y, Z) translation vars
-        dr          %(dX, dY, dZ) translation velos
-        euler       %(phi, theta, psi) rotation vars
-        w           %(p, q, r)   rotation velos
+        trans       % (X, Y, Z) translation vars
+        dtrans      % (dX, dY, dZ) translation velos
+        rot         % (phi, theta, psi) rotation vars
+        w           % (p, q, r)   rotation velos in body frame
         
         dq          % dq derivatives of joint states previously "dx"
         
@@ -82,7 +82,7 @@ classdef Quadcopter < handle
     %% METHODS
     methods
         %% CONSTRUCTOR
-        function obj = Quadcopter(params, initStates, initControlInputs, gains, simTime) %params, initStates, initControlInputs, gains, simTime
+        function obj = Quadcopter(params, initStates, initControlInputs, simTime) %params, initStates, initControlInputs, gains, simTime
             obj.g = 9.81;       % gravity
             obj.t = 0.0;        % time stamp
             obj.dt = 0.01;      % time interval
@@ -96,11 +96,11 @@ classdef Quadcopter < handle
                                  0, params('Iyy'),            0;...
                                  0,             0, params('Izz')];
             
-            % Dimension of quad's frame (pass for now)
+            % Initial state of quadcopter
             obj.q = initStates;
-            obj.r = obj.q(1:3);
-            obj.dr = obj.q(4:6);
-            obj.euler = obj.q(7:9);
+            obj.trans = obj.q(1:3);
+            obj.dtrans = obj.q(4:6);
+            obj.rot = obj.q(7:9);
             obj.w = obj.q(10:12);
             
             % Initiate derivatives of state vars
@@ -112,6 +112,7 @@ classdef Quadcopter < handle
             obj.M = obj.u(2:4);         % Set 3 torques
             
             %%%%%%%%%%%%%%%%%%%%%%%%%%% QUIZ #0 %%%%%%%%%%%%%%%%%%%%%%%%%%%
+            %% Error
             obj.phi_err = 0.0;
             obj.phi_err_prev = 0.0;
             obj.phi_err_sum = 0.0;
@@ -127,7 +128,8 @@ classdef Quadcopter < handle
             obj.zdot_err_sum = 0.0;
             
             %%%%%%%%%%%%%%%%%%%%%%%%%%% QUIZ #0 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-            % Find proper gains for the controller.
+            %% Find proper gains for the controller.
+            %{
             obj.KP_phi=gains('P_phi');
             obj.KI_phi=gains('I_phi');
             obj.KD_phi=gains('D_phi');
@@ -143,7 +145,9 @@ classdef Quadcopter < handle
             obj.KP_zdot = gains('P_zdot');
             obj.KI_zdot = gains('I_zdot');
             obj.KD_zdot = gains('D_zdot');
+            %}
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
         end
         
         %% RETURNS DRONE STATE
@@ -167,8 +171,8 @@ classdef Quadcopter < handle
             % Get vertex count
             obj.objVertexCount = size(v,1);
             % Move center point to origin
-            midPoint = sum(v)/obj.objVertexCount;
-            obj.objVerts = v - repmat(midPoint,obj.objVertexCount,1);
+            midPoint = sum(v) / obj.objVertexCount;
+            obj.objVerts = v - repmat(midPoint, obj.objVertexCount,1);
             % Create a transform to describe the location (at the origin, since it's centered
             obj.objPose = eye(4);
             % Scale the colours to be 0-to-1 (they are originally 0-to-255
@@ -182,7 +186,7 @@ classdef Quadcopter < handle
                         vertexColours = [0.5,0.5,0.5];
                     end
                 end
-                obj.objMesh_h = trisurf(f,obj.objVerts(:,1),obj.objVerts(:,2), obj.objVerts(:,3) ...
+                obj.objMesh_h = trisurf(f, obj.objVerts(:,1), obj.objVerts(:,2), obj.objVerts(:,3) ...
                     ,'FaceVertexCData',vertexColours,'EdgeColor','none','EdgeLighting','none'); 
             catch ME_1
                 disp(ME_1);
@@ -193,15 +197,15 @@ classdef Quadcopter < handle
         
         %% STATE SPACE (DIFFERENTIAL) EQUATIONS: INCOMPLETE!
         function obj = EvalEOM(obj)
-            bRi = RPY2Rot(obj.euler);
+            bRi = RPY2Rot(obj.rot);
             R = bRi';
             
             % Translational Motions
-            obj.dq(1:3) = obj.dr;
+            obj.dq(1:3) = obj.dtrans;
             obj.dq(4:6) = 1 / obj.m * ([0; 0; obj.m * obj.g] + R * obj.T * [0; 0; -1]);
             
             % Rotational Motions
-            phi = obj.euler(1); theta = obj.euler(2);
+            phi = obj.rot(1); theta = obj.rot(2);
             obj.dq(7:9) = [1    sin(phi)*tan(theta) cos(phi)*tan(theta);
                 0    cos(phi)            -sin(phi);
                 0    sin(phi)*sec(theta) cos(phi)*sec(theta)] * obj.w;
@@ -218,9 +222,9 @@ classdef Quadcopter < handle
             obj.EvalEOM();
             obj.q = obj.q + obj.dq.*obj.dt;
             
-            obj.r = obj.q(1:3);
-            obj.dr = obj.q(4:6);
-            obj.euler = obj.q(7:9);
+            obj.trans = obj.q(1:3);
+            obj.dtrans = obj.q(4:6);
+            obj.rot = obj.q(7:9);
             obj.w = obj.q(10:12);
             
             %%%%%%%%%%%%%%%%%%%%%%%%%%% QUIZ #0 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -240,9 +244,9 @@ classdef Quadcopter < handle
             obj.psi_des = refSig(3);
             obj.zdot_des = refSig(4);
             
-            obj.phi_err = obj.phi_des - obj.euler(1);
-            obj.theta_err = obj.theta_des - obj.euler(2);
-            obj.psi_err = obj.psi_des - obj.euler(3);
+            obj.phi_err = obj.phi_des - obj.rot(1);
+            obj.theta_err = obj.theta_des - obj.rot(2);
+            obj.psi_err = obj.psi_des - obj.rot(3);
             
             %%%%%%%%%%%%%%%%%%%%%%%%%%% QUIZ #0 %%%%%%%%%%%%%%%%%%%%%%%%%%%
             % Write a code for the rate controller (PID controller for now)
@@ -277,7 +281,7 @@ classdef Quadcopter < handle
             % Basic motor output assumed to make our problem easier.
             % Remove it when you want to put a realistic simulation
             % environment with the actual motor dynamics.
-            obj.zdot_err = obj.zdot_des - obj.dr(3);
+            obj.zdot_err = obj.zdot_des - obj.dtrans(3);
             
             obj.u(1) = obj.m * obj.g;
             obj.u(1) = obj.m * obj.g - ...
