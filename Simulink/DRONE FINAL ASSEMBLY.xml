@@ -1,0 +1,1561 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="03/08/22||13:42:21" using="Simscape Multibody Link Version 7.2" from="SolidWorks 27.5.0"/>
+<ModelUnits mass="kilogram" length="inch"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="DRONE FINAL ASSEMBLY" uid="DRONE FINAL ASSEMBLY" version="2455">
+<AssemblyFile name="DRONE FINAL ASSEMBLY.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="Distribution board-1" uid="Distribution board-1" entityUid="Distribution board*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="Assem2^DRONE FINAL ASSEMBLY-1" uid="Assem2^DRONE FINAL ASSEMBLY-1" entityUid="Assem2^DRONE FINAL ASSEMBLY" rigid="true">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0 0</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-1" uid="pan cross head_am-1" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 13 Type I Cross Recessed PHMS --13N">
+<Transform>
+<Rotation>0 0.92568894914479316 0.37828556598317209 -1 0 -1.2377118576005582e-16 -1.1102230246251617e-16 -0.37828556598317209 0.92568894914479316</Rotation>
+<Translation>0.015249999999999993 0.011899999999999999 -0.015249999999999994</Translation>
+</Transform>
+</Instance>
+<Instance name="Spider base-1" uid="Spider base-1" entityUid="Spider base*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 -0.0035000000000000001 0</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-4" uid="pan cross head_am-4" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 13 Type I Cross Recessed PHMS --13N">
+<Transform>
+<Rotation>0 -0.92568894914479583 -0.37828556598316565 -1 0 -1.2377118576005582e-16 1.1102230246251657e-16 0.37828556598316565 -0.92568894914479583</Rotation>
+<Translation>-0.015250000000000099 0.011899999999999999 0.015249999999999889</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-5" uid="pan cross head_am-5" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 13 Type I Cross Recessed PHMS --13N">
+<Transform>
+<Rotation>-1.1102230246251676e-16 -0.37828556598316238 0.92568894914479716 -1 0 -1.2377118576005582e-16 0 -0.92568894914479716 -0.37828556598316238</Rotation>
+<Translation>-0.015249999999999835 0.011899999999999999 -0.015250000000000152</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-2" uid="spacer-2" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>-3.4914813388431334e-15 0 -1 0 1 0 1 0 -3.4914813388431334e-15</Rotation>
+<Translation>0.015249999999999944 0.00175 0.01525000000000004</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-3" uid="spacer-3" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>-1 0 6.9829626776862667e-15 0 1 0 -6.9829626776862667e-15 0 -1</Rotation>
+<Translation>-0.015250000000000092 0.00175 0.015249999999999892</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-1" uid="spacer-1" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.015249999999999986 0.00175 -0.015249999999999998</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-3" uid="pan cross head_am-3" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 13 Type I Cross Recessed PHMS --13N">
+<Transform>
+<Rotation>1.1102230246251637e-16 0.37828556598316887 -0.92568894914479449 -1 0 -1.2377118576005582e-16 0 0.92568894914479449 0.37828556598316887</Rotation>
+<Translation>0.015249999999999941 0.011899999999999999 0.015250000000000047</Translation>
+</Transform>
+</Instance>
+<Instance name="spacer-4" uid="spacer-4" entityUid="spacer*:*Default">
+<Transform>
+<Rotation>1.04744440165294e-14 0 1 0 1 0 -1 0 1.04744440165294e-14</Rotation>
+<Translation>-0.015249999999999838 0.00175 -0.015250000000000145</Translation>
+</Transform>
+</Instance>
+<Instance name="spider arm-1" uid="spider arm-1" entityUid="spider arm*:*Default">
+<Transform>
+<Rotation>0.70710678118654802 0 -0.70710678118654713 0 1 0 0.70710678118654713 0 0.70710678118654802</Rotation>
+<Translation>0.017677669529663695 0.00050000000000000001 -0.030405591591021571</Translation>
+</Transform>
+</Instance>
+<Instance name="Spider top-1" uid="Spider top-1" entityUid="Spider top*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0.020500000000000001 0</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-9" uid="pan cross head_am-9" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N">
+<Transform>
+<Rotation>0 0.57667912979415636 -0.81697073464099956 -1 0 0 0 0.81697073464099945 0.57667912979415614</Rotation>
+<Translation>0.022627416997969441 0.027 0.031112698372208192</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-8" uid="pan slot head_am-8" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 -0.75174507288791759 0.65945382354546989 1 0 0 0 0.65945382354546977 0.75174507288791748</Rotation>
+<Translation>0.090852813742385477 -0.0010999999999999985 0.084852813742385944</Translation>
+</Transform>
+</Instance>
+<Instance name="motor-2" uid="motor-2" entityUid="motor*:*Default">
+<Transform>
+<Rotation>-1 0 -6.4727703071676466e-15 0 1 0 6.4727703071676466e-15 0 -1</Rotation>
+<Translation>0.084852813742387262 0.0049999999999999975 0.084852813742384223</Translation>
+</Transform>
+</Instance>
+<Instance name="electrical connector-1" uid="electrical connector-1" entityUid="electrical connector*:*Default">
+<Transform>
+<Rotation>-0.70710678118654724 0.70710678118654791 3.9136763450543334e-16 3.1007343568461634e-16 -1.6095430192051665e-16 1 0.70710678118654813 0.70710678118654724 -1.9626155733547226e-16</Rotation>
+<Translation>0.024041630560342614 0.0094999999999999876 -0.046669047558312179</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-4" uid="pan slot head_am-4" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 0.65945382354547244 0.75174507288791514 1 0 0 0 0.75174507288791526 -0.65945382354547255</Rotation>
+<Translation>0.084852813742385624 -0.0010999999999999985 -0.090852813742385768</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-6" uid="pan cross head_am-6" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N">
+<Transform>
+<Rotation>0 0.91101012307785767 0.41238399053511576 -1 0 0 0 -0.41238399053511576 0.91101012307785767</Rotation>
+<Translation>0.022627416997969545 0.027 -0.031112698372208113</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-4" uid="hex nut style 2_am-4" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M4 x 0.7 --D-N">
+<Transform>
+<Rotation>-0.76755389600986212 -0.64098441222863001 0 0 0 1 -0.64098441222863001 0.76755389600986212 0</Rotation>
+<Translation>0.084852813742385694 0.036799999999999992 -0.084852813742385763</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-6" uid="pan slot head_am-6" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 -0.87623032589553362 0.48189253571829394 1 0 0 0 0.48189253571829394 0.87623032589553373</Rotation>
+<Translation>0.084852813742385527 -0.0011000000000000003 0.076852813742385964</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-1" uid="pan slot head_am-1" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 0.30812803807745437 0.95134489652835108 1 0 0 0 0.95134489652835108 -0.30812803807745437</Rotation>
+<Translation>0.084852813742385624 -0.0011000000000000003 -0.078852813742385786</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-1" uid="hex nut style 2_am-1" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>1 0 0 0 0 -1 0 1 0</Rotation>
+<Translation>0.022627416997969545 -0.0064000000000000029 -0.031112698372208113</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-2" uid="pan slot head_am-2" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 0.48189253571829699 0.87623032589553207 1 0 0 0 0.87623032589553196 -0.48189253571829699</Rotation>
+<Translation>0.076852813742385673 -0.0011000000000000003 -0.084852813742385791</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-7" uid="pan slot head_am-7" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 -0.95134489652835219 0.30812803807745104 1 0 0 0 0.30812803807745104 0.95134489652835219</Rotation>
+<Translation>0.078852813742385494 -0.0011000000000000003 0.084852813742385902</Translation>
+</Transform>
+</Instance>
+<Instance name="spinner-1" uid="spinner-1" entityUid="spinner*:*Default">
+<Transform>
+<Rotation>5.5511151231257827e-15 0 -1 0 1 0 1 0 5.5511151231257827e-15</Rotation>
+<Translation>0.084852813742383862 0.0235 -0.084852813742387623</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-8" uid="hex nut style 2_am-8" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>-3.4914813388431334e-15 -1 0 0 0 -1 1 -3.4914813388431334e-15 0</Rotation>
+<Translation>0.031112698372208033 -0.0064000000000000029 0.022627416997969652</Translation>
+</Transform>
+</Instance>
+<Instance name="spider arm-2" uid="spider arm-2" entityUid="spider arm*:*Default">
+<Transform>
+<Rotation>-0.70710678118654957 0 -0.70710678118654557 0 1 0 0.70710678118654557 0 -0.70710678118654957</Rotation>
+<Translation>0.030405591591021509 0.00050000000000000001 0.017677669529663802</Translation>
+</Transform>
+</Instance>
+<Instance name="piller-1" uid="piller-1" entityUid="piller*:*Default">
+<Transform>
+<Rotation>-0.83716910433122238 0 -0.54694413860398872 0 -1 0 -0.54694413860398872 0 0.83716910433122238</Rotation>
+<Translation>0.064407150410870764 0.0044000000000000011 -0.070771111441549781</Translation>
+</Transform>
+</Instance>
+<Instance name="motor-1" uid="motor-1" entityUid="motor*:*Default">
+<Transform>
+<Rotation>9.96425164601078e-15 0 -1 0 1 0 1 0 9.96425164601078e-15</Rotation>
+<Translation>0.084852813742383931 0.0049999999999999975 -0.084852813742387553</Translation>
+</Transform>
+</Instance>
+<Instance name="spinner-2" uid="spinner-2" entityUid="spinner*:*Default">
+<Transform>
+<Rotation>-1 0 -2.0596337842826493e-15 0 1 0 2.0596337842826493e-15 0 -1</Rotation>
+<Translation>0.084852813742387345 0.023500000000000007 0.084852813742384167</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-2" uid="hex nut style 2_am-2" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>0.98208185031913642 0.18845487330854913 0 0 0 -1 -0.18845487330854913 0.98208185031913653 0</Rotation>
+<Translation>0.031112698372208106 0.020110993046577395 -0.022627416997969548</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-5" uid="hex nut style 2_am-5" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>0.98208185031913642 0.18845487330854913 0 0 0 -1 -0.18845487330854913 0.98208185031913653 0</Rotation>
+<Translation>0.031112698372208116 -0.0064000000000000029 -0.022627416997969559</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-7" uid="hex nut style 2_am-7" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M4 x 0.7 --D-N">
+<Transform>
+<Rotation>0.64098441222863267 -0.7675538960098599 0 0 0 1 -0.7675538960098599 -0.64098441222863267 0</Rotation>
+<Translation>0.084852813742385472 0.036799999999999992 0.084852813742385985</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-9" uid="hex nut style 2_am-9" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>0.18845487330854568 -0.9820818503191372 0 0 0 -1 0.98208185031913708 0.18845487330854568 0</Rotation>
+<Translation>0.022627416997969451 -0.0064000000000000029 0.031112698372208196</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-7" uid="pan cross head_am-7" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N">
+<Transform>
+<Rotation>0 0.81697073464099745 0.57667912979415903 -1 0 0 0 -0.57667912979415925 0.81697073464099756</Rotation>
+<Translation>0.031112698372208113 0.027 -0.022627416997969548</Translation>
+</Transform>
+</Instance>
+<Instance name="fan(propeller)-1" uid="fan(propeller)-1" entityUid="fan(propeller)*:*Default">
+<Transform>
+<Rotation>0.79653721910714481 0 0.60458949592021249 0 1 0 -0.60458949592021249 0 0.79653721910714481</Rotation>
+<Translation>0.08485281374238568 0.030000000000000016 -0.084852813742385819</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-10" uid="pan cross head_am-10" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N">
+<Transform>
+<Rotation>0 0.4123839905351126 -0.91101012307785911 -1 0 0 0 0.91101012307785911 0.4123839905351126</Rotation>
+<Translation>0.031112698372208033 0.027 0.022627416997969652</Translation>
+</Transform>
+</Instance>
+<Instance name="motor-3" uid="motor-3" entityUid="motor*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.084852813742386665 0.0049999999999999975 -0.084852813742384819</Translation>
+</Transform>
+</Instance>
+<Instance name="fan(propeller)-4" uid="fan(propeller)-4" entityUid="fan(propeller)*:*Default">
+<Transform>
+<Rotation>-0.79653721910714903 0 -0.60458949592020694 0 1 0 0.60458949592020694 0 -0.79653721910714903</Rotation>
+<Translation>-0.084852813742386277 0.030000000000000016 0.084852813742385222</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-14" uid="pan slot head_am-14" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 -0.48189253571829088 -0.8762303258955354 1 0 0 0 -0.87623032589553529 0.48189253571829088</Rotation>
+<Translation>-0.07685281374238627 -0.0011000000000000003 0.08485281374238525</Translation>
+</Transform>
+</Instance>
+<Instance name="motor-4" uid="motor-4" entityUid="motor*:*Default">
+<Transform>
+<Rotation>-2.9812889683245132e-15 0 1 0 1 0 -1 0 -2.9812889683245132e-15</Rotation>
+<Translation>-0.084852813742384528 0.0049999999999999975 0.084852813742386957</Translation>
+</Transform>
+</Instance>
+<Instance name="spinner-3" uid="spinner-3" entityUid="spinner*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.084852813742386748 0.023500000000000007 -0.084852813742384764</Translation>
+</Transform>
+</Instance>
+<Instance name="piller-3" uid="piller-3" entityUid="piller*:*Default">
+<Transform>
+<Rotation>-0.54694413860399749 0 0.83716910433121672 0 -1 0 0.83716910433121672 0 0.54694413860399749</Rotation>
+<Translation>-0.070771111441549114 0.0044000000000000011 -0.064407150410871514</Translation>
+</Transform>
+</Instance>
+<Instance name="electrical connector-2" uid="electrical connector-2" entityUid="electrical connector*:*Default">
+<Transform>
+<Rotation>-0.70710678118654569 -0.70710678118654968 1.962615573354709e-16 3.1007343568461634e-16 -1.6095430192051665e-16 1 -0.70710678118654968 0.70710678118654546 3.9136763450543403e-16</Rotation>
+<Translation>0.046669047558312096 0.0094999999999999876 0.024041630560342777</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-9" uid="pan slot head_am-9" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 0.87623032589553695 -0.48189253571828783 1 0 0 0 -0.48189253571828783 -0.87623032589553707</Rotation>
+<Translation>-0.084852813742384986 -0.0011000000000000003 -0.076852813742386561</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-12" uid="hex nut style 2_am-12" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M4 x 0.7 --D-N">
+<Transform>
+<Rotation>-0.640984412228638 0.76755389600985546 0 0 0 1 0.76755389600985546 0.640984412228638 0</Rotation>
+<Translation>-0.084852813742384875 0.036799999999999992 -0.084852813742386582</Translation>
+</Transform>
+</Instance>
+<Instance name="fan(propeller)-2" uid="fan(propeller)-2" entityUid="fan(propeller)*:*Default">
+<Transform>
+<Rotation>-0.66707337769395625 0 0.74499201926730518 0 1 0 -0.74499201926730518 0 -0.66707337769395625</Rotation>
+<Translation>0.084852813742385444 0.029999999999999985 0.084852813742385944</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-13" uid="hex nut style 2_am-13" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>-1 6.9829626776862667e-15 0 0 0 -1 -6.9829626776862667e-15 -1 0</Rotation>
+<Translation>-0.022627416997969763 -0.0064000000000000029 0.031112698372207953</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-12" uid="pan slot head_am-12" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 -0.65945382354546722 -0.7517450728879197 1 0 0 0 -0.75174507288791981 0.65945382354546733</Rotation>
+<Translation>-0.084852813742386263 -0.0010999999999999985 0.090852813742385172</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-13" uid="pan slot head_am-13" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 -0.30812803807744771 -0.95134489652835319 1 0 0 0 -0.95134489652835319 0.30812803807744771</Rotation>
+<Translation>-0.084852813742386179 -0.0011000000000000003 0.078852813742385189</Translation>
+</Transform>
+</Instance>
+<Instance name="piller-2" uid="piller-2" entityUid="piller*:*Default">
+<Transform>
+<Rotation>0.5469441386039916 0 -0.83716910433122049 0 -1 0 -0.83716910433122049 0 -0.5469441386039916</Rotation>
+<Translation>0.070771111441549558 0.0044000000000000011 0.064407150410871014</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-11" uid="pan cross head_am-11" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N">
+<Transform>
+<Rotation>0 -0.5766791297941507 0.81697073464100356 -1 0 0 0 -0.81697073464100345 -0.57667912979415048</Rotation>
+<Translation>-0.022627416997969222 0.027 -0.031112698372208352</Translation>
+</Transform>
+</Instance>
+<Instance name="fan(propeller)-3" uid="fan(propeller)-3" entityUid="fan(propeller)*:*Default">
+<Transform>
+<Rotation>0.66707337769395103 0 -0.74499201926730985 0 1 0 0.74499201926730985 0 0.66707337769395103</Rotation>
+<Translation>-0.084852813742384847 0.029999999999999985 -0.08485281374238654</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-14" uid="hex nut style 2_am-14" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>-0.98208185031913775 -0.18845487330854227 0 0 0 -1 0.18845487330854227 -0.98208185031913786 0</Rotation>
+<Translation>-0.031112698372208276 -0.0064000000000000029 0.02262741699796934</Translation>
+</Transform>
+</Instance>
+<Instance name="piller-4" uid="piller-4" entityUid="piller*:*Default">
+<Transform>
+<Rotation>0.83716910433121861 0 0.5469441386039946 0 -1 0 0.5469441386039946 0 -0.83716910433121861</Rotation>
+<Translation>-0.064407150410871264 0.0044000000000000011 0.070771111441549336</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-11" uid="hex nut style 2_am-11" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>1.04744440165294e-14 1 0 0 0 -1 -1 1.04744440165294e-14 0</Rotation>
+<Translation>-0.031112698372207873 -0.0064000000000000029 -0.022627416997969871</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-12" uid="pan cross head_am-12" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N">
+<Transform>
+<Rotation>0 -0.41238399053510622 0.911010123077862 -1 0 0 0 -0.911010123077862 -0.41238399053510622</Rotation>
+<Translation>-0.031112698372207873 0.027 -0.022627416997969871</Translation>
+</Transform>
+</Instance>
+<Instance name="electrical connector-3" uid="electrical connector-3" entityUid="electrical connector*:*Default">
+<Transform>
+<Rotation>0.7071067811865408 0.70710678118655457 -1.9626155733546817e-16 3.1007343568461634e-16 -1.6095430192051665e-16 1 0.70710678118655457 -0.70710678118654058 -3.9136763450543541e-16</Rotation>
+<Translation>-0.04666904755831193 0.0094999999999999876 -0.024041630560343103</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-11" uid="pan slot head_am-11" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 0.9513448965283543 -0.30812803807744438 1 0 0 0 -0.30812803807744438 -0.9513448965283543</Rotation>
+<Translation>-0.078852813742384897 -0.0011000000000000003 -0.084852813742386457</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-10" uid="hex nut style 2_am-10" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N">
+<Transform>
+<Rotation>-0.18845487330853883 0.98208185031913853 0 0 0 -1 -0.98208185031913842 -0.18845487330853883 0</Rotation>
+<Translation>-0.022627416997969232 -0.0064000000000000029 -0.031112698372208356</Translation>
+</Transform>
+</Instance>
+<Instance name="pan slot head_am-10" uid="pan slot head_am-10" entityUid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N">
+<Transform>
+<Rotation>0 0.75174507288792214 -0.65945382354546467 1 0 0 0 -0.65945382354546456 -0.75174507288792203</Rotation>
+<Translation>-0.09085281374238488 -0.0010999999999999985 -0.084852813742386582</Translation>
+</Transform>
+</Instance>
+<Instance name="spider arm-3" uid="spider arm-3" entityUid="spider arm*:*Default">
+<Transform>
+<Rotation>0.70710678118655446 0 0.70710678118654069 0 1 0 -0.70710678118654069 0 0.70710678118655446</Rotation>
+<Translation>-0.030405591591021384 0.00050000000000000001 -0.017677669529664014</Translation>
+</Transform>
+</Instance>
+<Instance name="spider arm-4" uid="spider arm-4" entityUid="spider arm*:*Default">
+<Transform>
+<Rotation>-0.70710678118654313 0 0.70710678118655201 0 1 0 -0.70710678118655201 0 -0.70710678118654313</Rotation>
+<Translation>-0.017677669529663907 0.00050000000000000001 0.030405591591021446</Translation>
+</Transform>
+</Instance>
+<Instance name="spinner-4" uid="spinner-4" entityUid="spinner*:*Default">
+<Transform>
+<Rotation>1.431847554560484e-15 0 1 0 1 0 -1 0 1.431847554560484e-15</Rotation>
+<Translation>-0.084852813742384459 0.0235 0.084852813742387026</Translation>
+</Transform>
+</Instance>
+<Instance name="battery-1" uid="battery-1" entityUid="battery*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0 0.022599999999999995 0</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-13" uid="pan cross head_am-13" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N">
+<Transform>
+<Rotation>0 -0.81697073464100145 -0.57667912979415337 -1 0 0 0 0.57667912979415359 -0.81697073464100156</Rotation>
+<Translation>-0.031112698372208272 0.027 0.02262741699796933</Translation>
+</Transform>
+</Instance>
+<Instance name="pan cross head_am-14" uid="pan cross head_am-14" entityUid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N">
+<Transform>
+<Rotation>0 -0.91101012307786056 -0.41238399053510938 -1 0 0 0 0.41238399053510938 -0.91101012307786056</Rotation>
+<Translation>-0.022627416997969763 0.027 0.031112698372207953</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut style 2_am-15" uid="hex nut style 2_am-15" entityUid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M4 x 0.7 --D-N">
+<Transform>
+<Rotation>0.76755389600985768 0.64098441222863534 0 0 0 1 0.64098441222863534 -0.76755389600985768 0</Rotation>
+<Translation>-0.08485281374238629 0.036799999999999992 0.084852813742385166</Translation>
+</Transform>
+</Instance>
+<Instance name="electrical connector-4" uid="electrical connector-4" entityUid="electrical connector*:*Default">
+<Transform>
+<Rotation>0.70710678118655212 -0.70710678118654302 -3.9136763450543472e-16 3.1007343568461634e-16 -1.6095430192051665e-16 1 -0.70710678118654324 -0.70710678118655212 1.9626155733546952e-16</Rotation>
+<Translation>-0.02404163056034294 0.0094999999999999876 0.046669047558312013</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concentric1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>-0.015250000000000007 0.00175 0.015250000000000001</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Spider base-1</Uid>
+</InstancePath>
+<Position>-0.015249999999999996 0 0.01525</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>0.015249999999999991 0.00175 0.015250000000000001</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Spider base-1</Uid>
+</InstancePath>
+<Position>0.015249999999999946 0 0.01525000000000005</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>-0.016 0 0.015999999999999997</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Spider base-1</Uid>
+</InstancePath>
+<Position>0.015249999999999946 0.0035000000000000001 0.01525000000000005</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric3">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>0.015249999999999991 0.00175 0.015250000000000001</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>DRONE FINAL ASSEMBLY</Uid>
+</InstancePath>
+<Position>0.015249999999999991 0.0077499999999999973 0.01525</Position>
+<Axis>0 1 1.1102230246251568e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>-0.015250000000000007 0.00175 0.015250000000000001</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>DRONE FINAL ASSEMBLY</Uid>
+</InstancePath>
+<Position>-0.015250000000000003 0.0077499999999999991 0.01525</Position>
+<Axis>0 1 1.1102230246251568e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric5">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>0.015249999999999988 0.00175 -0.015249999999999998</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spacer-1</Uid>
+</InstancePath>
+<Position>0 0.0060000000000000001 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>-0.016 0.00175 0.015999999999999997</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spacer-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>DRONE FINAL ASSEMBLY</Uid>
+</InstancePath>
+<Position>0.015999999999999983 0.0077499999999999973 0.015999999999999993</Position>
+<Axis>0 -1 -1.1102230246251568e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spacer-1</Uid>
+</InstancePath>
+<Position>0 0.0060000000000000001 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric6">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>DRONE FINAL ASSEMBLY</Uid>
+</InstancePath>
+<Position>0.015249999999999994 0.0077500000000000008 -0.015249999999999996</Position>
+<Axis>0 1 1.1102230246251568e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan cross head_am-1</Uid>
+</InstancePath>
+<Position>-0.025399999999999968 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident4">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>DRONE FINAL ASSEMBLY</Uid>
+</InstancePath>
+<Position>0.015999999999999983 0.0094999999999999963 0.015999999999999993</Position>
+<Axis>0 1 1.1102230246251568e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pan cross head_am-1</Uid>
+</InstancePath>
+<Position>0.0023999999999999976 0.0015000000000000048 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric7">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Spider base-1</Uid>
+</InstancePath>
+<Position>0.022627416997969493 0.0040000000000000001 -0.031112698372208071</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.0030000000000000148 0.010000000000000002 -0.0040000000000000036</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric8">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Spider base-1</Uid>
+</InstancePath>
+<Position>0.031112698372208064 0.0040000000000000001 -0.022627416997969503</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.015000000000000012 0.010000000000000002 -0.0040000000000000036</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident5">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Spider base-1</Uid>
+</InstancePath>
+<Position>0 0.0040000000000000001 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.018999999999999996 0 -0.021142135623730941</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric9">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.015000000000000012 0.010000000000000002 -0.0040000000000000036</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Spider top-1</Uid>
+</InstancePath>
+<Position>0.031112698372208064 0.0040999999999999995 -0.022627416997969503</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric10">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.0030000000000000148 0.010000000000000002 -0.0040000000000000036</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Spider top-1</Uid>
+</InstancePath>
+<Position>0.022627416997969493 0.0040999999999999995 -0.031112698372208068</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident6">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0 0.02 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Spider top-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric11">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Spider top-1</Uid>
+</InstancePath>
+<Position>0.022627416997969493 0.0040999999999999995 -0.031112698372208068</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan cross head_am-6</Uid>
+</InstancePath>
+<Position>-0.025399999999999961 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident7">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Spider top-1</Uid>
+</InstancePath>
+<Position>0 0.0040999999999999995 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pan cross head_am-6</Uid>
+</InstancePath>
+<Position>0.0023999999999999994 0.0014999999999999944 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric12">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan cross head_am-6</Uid>
+</InstancePath>
+<Position>-0.025399999999999961 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>hex nut style 2_am-1</Uid>
+</InstancePath>
+<Position>0 0 -0.0028999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident8">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Spider base-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>hex nut style 2_am-1</Uid>
+</InstancePath>
+<Position>0 0.0031754264805429581 -0.0028999999999999998</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric13">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan cross head_am-7</Uid>
+</InstancePath>
+<Position>-0.025399999999999961 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>hex nut style 2_am-2</Uid>
+</InstancePath>
+<Position>0 0 -0.0028999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric14">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Spider top-1</Uid>
+</InstancePath>
+<Position>0.031112698372208064 0.0040999999999999995 -0.022627416997969503</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan cross head_am-7</Uid>
+</InstancePath>
+<Position>-0.025399999999999961 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident9">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Spider top-1</Uid>
+</InstancePath>
+<Position>0 0.0040999999999999995 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pan cross head_am-7</Uid>
+</InstancePath>
+<Position>0.0023999999999999994 0.0014999999999999944 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric16">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.0090000000000000097 0.010000000000000002 -0.086000000000000021</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>motor-1</Uid>
+</InstancePath>
+<Position>0 0.022000000000000006 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric18">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.0047573593128806841 0.010000000000000002 -0.090242640687119291</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>motor-1</Uid>
+</InstancePath>
+<Position>-0.0060000000000000053 0.0029999999999999992 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric19">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.013242640687119238 0.010000000000000002 -0.081757359312880695</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>motor-1</Uid>
+</InstancePath>
+<Position>0.0060000000000000053 0.0029999999999999992 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident11">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.017999999999999995 0.0044999999999999997 -0.074791666666666673</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>motor-1</Uid>
+</InstancePath>
+<Position>0.00099999999999998701 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric20">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.013242640687119238 0.010000000000000002 -0.081757359312880695</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan slot head_am-1</Uid>
+</InstancePath>
+<Position>-0.025399999999999964 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident12">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.018999999999999996 0 -0.021142135623730941</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pan slot head_am-1</Uid>
+</InstancePath>
+<Position>0.0015999999999999999 0.00099999999999998701 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric21">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.0033431457505076079 0.010000000000000002 -0.080343145750507633</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan slot head_am-2</Uid>
+</InstancePath>
+<Position>-0.025399999999999964 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident13">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.018999999999999996 0 -0.021142135623730941</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pan slot head_am-2</Uid>
+</InstancePath>
+<Position>0.0016000000000000001 0.0010000000000000078 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric22">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.0047573593128806841 0.010000000000000002 -0.090242640687119291</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan slot head_am-4</Uid>
+</InstancePath>
+<Position>-0.025399999999999961 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident14">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.018999999999999996 0 -0.021142135623730941</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>pan slot head_am-4</Uid>
+</InstancePath>
+<Position>0.0015999999999999999 0.0010000000000000009 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric23">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>motor-1</Uid>
+</InstancePath>
+<Position>0 0.022000000000000006 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spinner-1</Uid>
+</InstancePath>
+<Position>0 0.014499999999999999 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident15">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>motor-1</Uid>
+</InstancePath>
+<Position>0.0075000000000000067 0.018500000000000003 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spinner-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric24">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>motor-1</Uid>
+</InstancePath>
+<Position>-0.004500000000000004 0.014500000000000002 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spinner-1</Uid>
+</InstancePath>
+<Position>-0.004500000000000004 0.0034999999999999996 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric25">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spinner-1</Uid>
+</InstancePath>
+<Position>0 0.014499999999999999 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>fan(propeller)-1</Uid>
+</InstancePath>
+<Position>0 -0.0029999999999999992 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident16">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spinner-1</Uid>
+</InstancePath>
+<Position>0.0080000000000000071 0.0034999999999999996 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>fan(propeller)-1</Uid>
+</InstancePath>
+<Position>0 -0.0029999999999999992 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric26">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spinner-1</Uid>
+</InstancePath>
+<Position>0 0.014499999999999999 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>hex nut style 2_am-4</Uid>
+</InstancePath>
+<Position>0 0 -0.0037999999999999978</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident17">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>fan(propeller)-1</Uid>
+</InstancePath>
+<Position>0 0.0029999999999999992 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>hex nut style 2_am-4</Uid>
+</InstancePath>
+<Position>0 0.0040414518843273906 -0.0037999999999999978</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident19">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>DRONE FINAL ASSEMBLY</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident20">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>DRONE FINAL ASSEMBLY</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident21">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Distribution board-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>DRONE FINAL ASSEMBLY</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric27">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>pan cross head_am-7</Uid>
+</InstancePath>
+<Position>-0.025399999999999961 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>hex nut style 2_am-5</Uid>
+</InstancePath>
+<Position>0 0 -0.0028999999999999998</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident22">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Spider base-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>hex nut style 2_am-5</Uid>
+</InstancePath>
+<Position>0 0.0031754264805429616 -0.0028999999999999998</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident23">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0 0.010000000000000002 -0.09043502884254441</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>electrical connector-1</Uid>
+</InstancePath>
+<Position>0.010000000000000009 0.0069999999999999993 -0.0069999999999999975</Position>
+<Axis>1.1102230246251565e-16 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident25">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0 0.010000000000000002 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>electrical connector-1</Uid>
+</InstancePath>
+<Position>0.016000000000000007 0.0035244427333691458 0.0055578399700715944</Position>
+<Axis>1.0000000000000002 1.1102230246251565e-16 -3.5326079011451726e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident26">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.018999999999999996 0 -0.021142135623730941</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>electrical connector-1</Uid>
+</InstancePath>
+<Position>-0.009999999999999995 0.0069999999999999923 -0.0089999999999999941</Position>
+<Axis>1.0544315068925866e-16 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric28">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.0045000000000000057 0.0060000000000000001 -0.061585465624857352</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>piller-1</Uid>
+</InstancePath>
+<Position>0 0.0038999999999999998 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident27">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spider arm-1</Uid>
+</InstancePath>
+<Position>0.018999999999999996 0 -0.021142135623730941</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>piller-1</Uid>
+</InstancePath>
+<Position>0 0.0038999999999999998 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric29">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>spinner-2</Uid>
+</InstancePath>
+<Position>0 0.014499999999999999 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>fan(propeller)-2</Uid>
+</InstancePath>
+<Position>0 -0.0029999999999999992 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident28">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>spinner-2</Uid>
+</InstancePath>
+<Position>0.0080000000000000071 0.0034999999999999996 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>fan(propeller)-2</Uid>
+</InstancePath>
+<Position>0 -0.0029999999999999992 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident29">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Spider top-1</Uid>
+</InstancePath>
+<Position>0 0.0021000000000000012 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>battery-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="Assem2^DRONE FINAL ASSEMBLY" uid="Assem2^DRONE FINAL ASSEMBLY" version="102">
+<ModelUnits mass="kilogram" length="inch"/>
+<AssemblyFile name="DRONE FINAL ASSEMBLY.sldasm" type="SolidWorks Assembly"/>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="Distribution board" uid="Distribution board*:*Default" version="119">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Distribution board.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0022194246296915903</Mass>
+<CenterOfMass>3.400260498365597e-05 0.00088060597345497311 4.8578907903083004e-05</CenterOfMass>
+<Inertia>2.3383093545684036e-07 4.6562945203113433e-07 2.3297894661838871e-07 -1.9340596249350259e-10 -1.1732480335847427e-09 -1.3534882446308618e-10</Inertia>
+</MassProperties>
+<GeometryFile name="Distribution board_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.89803921568627454" g="0.89803921568627454" b="0.89803921568627454" a="1"/>
+<Diffuse r="0.89803921568627454" g="0.89803921568627454" b="0.89803921568627454" a="1"/>
+<Specular r="0.71843137254901968" g="0.71843137254901968" b="0.71843137254901968" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Spider base" uid="Spider base*:*Default" version="137">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Spider base.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.010841044083842972</Mass>
+<CenterOfMass>0 0.0015826622696003838 0</CenterOfMass>
+<Inertia>5.0599116978435364e-06 1.0092986780740359e-05 5.0599116978435245e-06 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Spider base_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.030588236509584914" g="0.030588236509584914" b="0.030588236509584914" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Spider top" uid="Spider top*:*Default" version="163">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Spider top.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.011006441211363099</Mass>
+<CenterOfMass>0 0.0016290403745968893 0</CenterOfMass>
+<Inertia>5.4466881060332305e-06 1.0979735820143024e-05 5.5596743720866118e-06 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Spider top_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.030588236509584914" g="0.030588236509584914" b="0.030588236509584914" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Part>
+<Part name="battery" uid="battery*:*Default" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="battery.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.041443671392366752</Mass>
+<CenterOfMass>0 0.0087500000000000008 0</CenterOfMass>
+<Inertia>5.009647716137632e-06 2.0823553833260889e-05 1.7874928810062501e-05 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="battery_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.49803921568627452" g="0.49803921568627452" b="0.49803921568627452" a="1"/>
+<Diffuse r="0.49803921568627452" g="0.49803921568627452" b="0.49803921568627452" a="1"/>
+<Specular r="0.14941177064297245" g="0.14941177064297245" b="0.14941177064297245" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Part>
+<Part name="electrical connector" uid="electrical connector*:*Default" version="132">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="electrical connector.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0029588111615642494</Mass>
+<CenterOfMass>-6.5916218780186605e-05 0.0035020070501706958 6.0353161476651105e-06</CenterOfMass>
+<Inertia>8.5887766046528201e-08 2.2422235532227952e-07 1.604423104966851e-07 -1.3792734096880839e-12 1.4435016733073578e-10 5.5914124795389729e-11</Inertia>
+</MassProperties>
+<GeometryFile name="electrical connector_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.56862745098039214" g="0.5490196078431373" b="0.50980392156862742" a="1"/>
+<Diffuse r="0.56862745098039214" g="0.5490196078431373" b="0.50980392156862742" a="1"/>
+<Specular r="0.39803921568627448" g="0.3843137254901961" b="0.35686274509803917" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="fan(propeller)" uid="fan(propeller)*:*Default" version="136">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="fan(propeller).SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00093498850674554796</Mass>
+<CenterOfMass>0 0.00031485424212697157 0</CenterOfMass>
+<Inertia>5.7895152334529054e-07 5.9201178944451368e-07 1.6675330321771225e-08 0 -4.4621378881340595e-08 0</Inertia>
+</MassProperties>
+<GeometryFile name="fan(propeller)_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Diffuse r="0.10196078431372549" g="0.10196078431372549" b="0.10196078431372549" a="1"/>
+<Specular r="0.040784314333223826" g="0.040784314333223826" b="0.040784314333223826" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="hex nut style 2_am" uid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M3 x 0.5 --D-N" version="1129">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="hex nut style 2_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>6.0954022917407744e-05</Mass>
+<CenterOfMass>0 9.6370721200994813e-10 -0.0014487828947711949</CenterOfMass>
+<Inertia>1.9383179382017738e-10 1.9383087153577526e-10 3.0415285090940217e-10 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="hex nut style 2_am_B18.2.4.2M - Hex nut- Style 2-  M3 x 0.5 --D-N_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="hex nut style 2_am" uid="hex nut style 2_am*:*B18.2.4.2M - Hex nut, Style 2,  M4 x 0.7 --D-N" version="1138">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="hex nut style 2_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00012695380472341395</Mass>
+<CenterOfMass>0 1.2281169841186426e-09 -0.0018985799497161075</CenterOfMass>
+<Inertia>6.6863141516518786e-10 6.686283001832912e-10 1.039314077621663e-09 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="hex nut style 2_am_B18.2.4.2M - Hex nut- Style 2-  M4 x 0.7 --D-N_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="motor" uid="motor*:*Default" version="129">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="motor.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.005425862401822374</Mass>
+<CenterOfMass>-1.1557376363344803e-13 0.0072292546912446128 -2.9251876320949402e-13</CenterOfMass>
+<Inertia>2.7512183854417461e-07 3.5096264045024318e-07 2.7564962789328029e-07 0 5.2498826818115768e-15 0</Inertia>
+</MassProperties>
+<GeometryFile name="motor_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.96862745098039216" g="0.9882352941176471" b="1" a="1"/>
+<Diffuse r="0.96862745098039216" g="0.9882352941176471" b="1" a="1"/>
+<Specular r="0.29058823529411765" g="0.2964705882352941" b="0.29999999999999999" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="pan cross head_am" uid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 13 Type I Cross Recessed PHMS --13N" version="1148">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="pan cross head_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00013803359471627105</Mass>
+<CenterOfMass>0.0064056040925546155 0 0</CenterOfMass>
+<Inertia>2.7931427810942172e-10 3.1595462490633771e-09 3.1595462490633771e-09 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="pan cross head_am_B18.6.7M - M3 x 0.5 x 13 Type I Cross Recessed PHMS --13N_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="pan cross head_am" uid="pan cross head_am*:*B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N" version="1160">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="pan cross head_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00025819933883287389</Mass>
+<CenterOfMass>0.014547492614488596 0 0</CenterOfMass>
+<Inertia>4.1450092187633745e-10 2.5782256391707664e-08 2.5782256391707664e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="pan cross head_am_B18.6.7M - M3 x 0.5 x 30 Type I Cross Recessed PHMS --30N_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="pan slot head_am" uid="pan slot head_am*:*B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N" version="995">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="pan slot head_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>3.61766194942426e-05</Mass>
+<CenterOfMass>0.0028245402835792494 -1.428408750321969e-11 1.6994681767525008e-11</CenterOfMass>
+<Inertia>4.3039856085944894e-11 2.0467422902736206e-10 2.0585669318499824e-10 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="pan slot head_am_B18.6.7M - M2 x 0.4 x 6 Slotted PHMS --6N_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="piller" uid="piller*:*Default" version="125">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="piller.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00013514803755870655</Mass>
+<CenterOfMass>-1.0955562820568579e-10 0.0068005219371187831 -4.1748080045260785e-11</CenterOfMass>
+<Inertia>1.3469266042481411e-09 3.8861016002877876e-10 1.3469263465715933e-09 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="piller_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.20000000000000001" g="0.40000000000000002" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.20000000000000001" g="0.40000000000000002" b="0.69803921568627447" a="1"/>
+<Specular r="0.059999999999999998" g="0.12" b="0.20941176470588233" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="spacer" uid="spacer*:*Default" version="107">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="spacer.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>7.539822368615502e-05</Mass>
+<CenterOfMass>0 0.0030000000000000001 0</CenterOfMass>
+<Inertia>3.8641589639154445e-10 3.2044245066615888e-10 3.8641589639154445e-10 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="spacer_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="spider arm" uid="spider arm*:*Default" version="235">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="spider arm.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0076254058577004411</Mass>
+<CenterOfMass>0.0061321896185844143 0.006200937304272857 -0.03545922598774752</CenterOfMass>
+<Inertia>6.3297976103381012e-06 6.2723250016433499e-06 3.3133572580047187e-07 -5.0639766100786398e-07 -1.7330534632518861e-07 -2.0315944549367904e-08</Inertia>
+</MassProperties>
+<GeometryFile name="spider arm_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="1" g="1" b="1" a="1"/>
+<Diffuse r="1" g="1" b="1" a="1"/>
+<Specular r="0.30000001192092896" g="0.30000001192092896" b="0.30000001192092896" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.5</Shininess>
+</VisualProperties>
+</Part>
+<Part name="spinner" uid="spinner*:*Default" version="111">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="spinner.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00069316100308805225</Mass>
+<CenterOfMass>0 0.003103335750543874 0</CenterOfMass>
+<Inertia>1.7701457780990517e-08 1.9468565284905607e-08 1.7701457780990517e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="spinner_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
