@@ -111,7 +111,7 @@ hold on;
 commandSig(1) = -1.0*D2R; %phi
 commandSig(2) = 1.0*D2R; %theta
 commandSig(3) = 10.0*D2R; %psi
-commandSig(4) = 1.0; %zdot
+commandSig(4) = 2.0; %zdot
 for i = 1:simulationTime/0.01
     %% Take a step
     drone1.AttitudeCtrl(commandSig);
@@ -157,7 +157,7 @@ for i = 1:simulationTime/0.01
         plot(i/100,drone1_state(6),'.');
 		
     drawnow;
-    
+    drone1.dr
     
     %% BREAK WHEN CRASH
     if (drone1_state(3) >= 0)
