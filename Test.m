@@ -58,10 +58,19 @@ d2y = -0.005*sin(0.1*t);
 z = 0.01*t.^2;
 dz = 0.04*t;
 d2z = 0.04*ones(1,size(t,2));
-for i = 1:3%size(t,2)
-quad.TrajectoryControl([x(i);y(i);z(i)],[dx(i);dy(i);dz(i)],[d2x(i);d2y(i);d2z(i)])
-quad.rot
-quad.T
+rot = zeros(3,size(t,2));
+drot = zeros(3,size(t,2));
+d2rot = zeros(3,size(t,2));
+for i = 1:size(t,2)
+    quad.TrajectoryControl([x(i);y(i);z(i)],[dx(i);dy(i);dz(i)],[d2x(i);d2y(i);d2z(i)]);
+    rot(:,i) = quad.rot;
+    if i > 1
+        drot(:,i) = rot(:,i) - rot(:,i-1);
+        d2rot(:,i) = drot(:,i) - drot(:,i-1);
+    end
+    quad.EOM(drot(:,i),d2rot(:,i));
+    quad.M
+    i
 end
 % quad.EOM
 % moment = quad.M

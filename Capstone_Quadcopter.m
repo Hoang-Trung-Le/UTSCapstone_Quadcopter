@@ -21,6 +21,10 @@ simTime = 20;
 quad = Quadcopter(quadParams, initState, initInput, simTime);
 quad.Model3D('CloverAssemblyP.PLY');
 
+%% TRAJECTORY
+
+
+
 %%
 % Translational
 % Linear translation force

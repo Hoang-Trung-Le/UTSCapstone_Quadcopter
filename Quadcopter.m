@@ -45,6 +45,10 @@ classdef Quadcopter < handle
         
     end
     
+    properties (Access = private)
+        
+    end
+    
     % Properties to construct 3D model
     properties (Access = private)
         model       % 3D model of quadcopter from .ply file
@@ -193,14 +197,17 @@ classdef Quadcopter < handle
         
         
         %% EQUATION OF MOTION (EULER-LAGRANGE EQUATION) (ANGULAR COMPONENT)
-        function EOM(obj)
+        function EOM(obj, drot, d2rot)
             
             
 %             Ja(obj.I, obj.rot(1), obj.rot(2))
 %             Coriolis(obj.I, obj.rot, obj.drot)
 
-            
-            obj.M = Ja(obj.I, obj.rot(1:2))*obj.d2rot + Coriolis(obj.I, obj.rot, obj.drot)*obj.drot
+            obj.drot = drot;
+            obj.d2rot = d2rot;
+%             Ja(obj.I, obj.rot(1), obj.rot(2))*obj.d2rot
+%             Coriolis(obj.I, obj.rot, obj.drot)
+            obj.M = Ja(obj.I, obj.rot(1), obj.rot(2))*obj.d2rot + Coriolis(obj.I, obj.rot, obj.drot)*obj.drot;
             
             
         end
