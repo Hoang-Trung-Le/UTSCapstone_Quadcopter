@@ -11,7 +11,7 @@ classdef Quadcopter < handle
         dragMat = diag(0.25*ones(1,3));
         b = 1.14*10^-7          % drag constant
         k = 2.98*10^-6          % lift constant
-
+        
     end
     
     
@@ -23,7 +23,7 @@ classdef Quadcopter < handle
         
         m          % mass
         l          % arm length of quadcopter
-        I          % moment of inertia matrix        
+        I          % moment of inertia matrix
         
         q           % q (X, Y, Z, dX, dY, dZ, phi, theta, psi, p, q, r) state variables previously "x"
         trans       % (X, Y, Z) translation vars
@@ -40,8 +40,10 @@ classdef Quadcopter < handle
         T           % thrust
         M           % moments
         
-%         b           % drag constant
-%         k           % lift constant
+        %         b           % drag constant
+        %         k           % lift constant
+        
+        omega       % Angular velocities of rotors
         
     end
     
@@ -112,8 +114,8 @@ classdef Quadcopter < handle
             obj.m = params('mass');
             obj.l = params('armLength');
             obj.I = [params('Ixx'),             0,            0;...
-                                 0, params('Iyy'),            0;...
-                                 0,             0, params('Izz')];
+                0, params('Iyy'),            0;...
+                0,             0, params('Izz')];
             
             % Initial state of quadcopter
             obj.q = initStates;
@@ -132,6 +134,9 @@ classdef Quadcopter < handle
             obj.u = initControlInputs;
             obj.T = obj.u(1);           % Set thrust
             obj.M = obj.u(2:4);         % Set 3 torques
+            
+            % Set angular velocities of rotors
+            obj.omega = zeros(4,1);
             
             %%%%%%%%%%%%%%%%%%%%%%%%%%% QUIZ #0 %%%%%%%%%%%%%%%%%%%%%%%%%%%
             %% Error
@@ -170,7 +175,7 @@ classdef Quadcopter < handle
             obj.KD_zdot = gains('D_zdot');
             %}
             %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+            
         end
         
         %% RETURNS DRONE STATE
@@ -200,13 +205,13 @@ classdef Quadcopter < handle
         function EOM(obj, drot, d2rot)
             
             
-%             Ja(obj.I, obj.rot(1), obj.rot(2))
-%             Coriolis(obj.I, obj.rot, obj.drot)
-
+            %             Ja(obj.I, obj.rot(1), obj.rot(2))
+            %             Coriolis(obj.I, obj.rot, obj.drot)
+            
             obj.drot = drot;
             obj.d2rot = d2rot;
-%             Ja(obj.I, obj.rot(1), obj.rot(2))*obj.d2rot
-%             Coriolis(obj.I, obj.rot, obj.drot)
+            %             Ja(obj.I, obj.rot(1), obj.rot(2))*obj.d2rot
+            %             Coriolis(obj.I, obj.rot, obj.drot)
             obj.M = Ja(obj.I, obj.rot(1), obj.rot(2))*obj.d2rot + Coriolis(obj.I, obj.rot, obj.drot)*obj.drot;
             
             
@@ -214,16 +219,19 @@ classdef Quadcopter < handle
         
         
         %% CONTROL INPUT CALCULATION
-        function obj = ControlInput(obj)
+        function ControlInput(obj)
             
-            
+            obj.omega = sqrt(obj.T/(4*obj.k) + [-1 0 -1; ...
+                                                 1 1 0; ...
+                                                -1 0 1; ...
+                                                 1 -1 0]*[(obj.M(3)/(4*obj.b)); (obj.M(1)/(2*obj.l*obj.k)); (obj.M(2)/(2*obj.l*obj.k))]);
             
             
         end
         
-    
-    
-    
+        
+        
+        
         
         
         
@@ -359,7 +367,7 @@ classdef Quadcopter < handle
                     end
                 end
                 obj.objMesh_h = trisurf(f, obj.objVerts(:,1), obj.objVerts(:,2), obj.objVerts(:,3) ...
-                    ,'FaceVertexCData',vertexColours,'EdgeColor','none','EdgeLighting','none'); 
+                    ,'FaceVertexCData',vertexColours,'EdgeColor','none','EdgeLighting','none');
             catch ME_1
                 disp(ME_1);
             end

@@ -37,41 +37,65 @@ Clover.MoveObj([0 0 0 pi/2 0 0]);
 %%
 camlight
 %%
+uav = PlaceObj('CloverAssemblyP.PLY');
+%%
 clc
 addpath(genpath('./Addition'));
 quadParams = ReadProperty("CloverProp.pdf");
 initState = zeros(12,1);
 initInput = zeros(4,1);
-simTime = 20;
+simTime = 10;
 quad = Quadcopter(quadParams, initState, initInput, simTime);
 % quad.Model3D('CloverAssemblyP.PLY');
 % t = quad.T
 
 % Trajectory
 t = 0:0.01:simTime;
-x = 0.5*cos(0.1*t);
-dx = -0.05*sin(0.1*t);
-d2x = -0.005*cos(0.1*t);
-y = 0.5*sin(0.1*t);
-dy = 0.05*cos(0.1*t);
-d2y = -0.005*sin(0.1*t);
-z = 0.01*t.^2;
+amp = 0.5;
+speed = pi/2;
+x = amp*cos(speed*t);
+dx = -amp*speed*sin(speed*t);
+d2x = -amp*speed*cos(speed*t);
+y = amp*sin(speed*t);
+dy = amp*speed*cos(speed*t);
+d2y = -amp*speed*sin(speed*t);
+z = 0.02*t.^2;
 dz = 0.04*t;
 d2z = 0.04*ones(1,size(t,2));
 rot = zeros(3,size(t,2));
 drot = zeros(3,size(t,2));
 d2rot = zeros(3,size(t,2));
+omega = zeros(4,size(t,2));
+figure(1)
+hold on
+axis([-1 1 -1 1 0 3])
 for i = 1:size(t,2)
     quad.TrajectoryControl([x(i);y(i);z(i)],[dx(i);dy(i);dz(i)],[d2x(i);d2y(i);d2z(i)]);
     rot(:,i) = quad.rot;
     if i > 1
-        drot(:,i) = rot(:,i) - rot(:,i-1);
-        d2rot(:,i) = drot(:,i) - drot(:,i-1);
+        drot(:,i) = (rot(:,i) - rot(:,i-1))/0.01;
+        d2rot(:,i) = (drot(:,i) - drot(:,i-1))/0.01;
     end
     quad.EOM(drot(:,i),d2rot(:,i));
-    quad.M
-    i
+%     quad.M
+    quad.ControlInput
+    omega(:,i) = double(quad.omega);
+    uav.MoveObj([x(i) y(i) z(i) rot(1,i) rot(2,i) rot(3,i)]);
+    pause(0.0001)
 end
+hold off
+figure(2)
+plot(t,omega(1,:),'r');
+hold on
+plot(t,omega(2,:),'b');
+plot(t,omega(3,:),'k');
+plot(t,omega(4,:),'g');
+hold off
+figure(3)
+plot(x,y);
+hold on
+plot3(x,y,z,'m');
+hold off
 % quad.EOM
 % moment = quad.M
 
@@ -86,7 +110,7 @@ a.keys
 syms T phi tta
 m = 0.3;
 g = 9.81;
-dtrans = [0.1;0.2;0.3];
+dtrans = [speed;0.2;0.3];
 d2trans = [0.01;0.02;0.03];
 r = RotMat([phi tta 0]).'*(m*([0;0;g]+d2trans) + 0.25*dtrans)
 eq = [0;0;T] == r
