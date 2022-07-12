@@ -45,20 +45,20 @@ quadParams = ReadProperty("CloverProp.pdf");
 initState = zeros(12,1);
 initInput = zeros(4,1);
 simTime = 10;
-quad = Quadcopter(quadParams, initState, initInput, simTime);
+quad = Quadcopter(quadParams, initState, initInput);
 % quad.Model3D('CloverAssemblyP.PLY');
 % t = quad.T
 
 % Trajectory
 t = 0:0.01:simTime;
 amp = 0.5;
-speed = pi/2;
-x = amp*cos(speed*t);
-dx = -amp*speed*sin(speed*t);
-d2x = -amp*speed*cos(speed*t);
-y = amp*sin(speed*t);
-dy = amp*speed*cos(speed*t);
-d2y = -amp*speed*sin(speed*t);
+freq = pi/2;
+x = amp*cos(freq*t);
+dx = -amp*freq*sin(freq*t);
+d2x = -amp*freq^2*cos(freq*t);
+y = amp*sin(freq*t);
+dy = amp*freq*cos(freq*t);
+d2y = -amp*freq^2*sin(freq*t);
 z = 0.02*t.^2;
 dz = 0.04*t;
 d2z = 0.04*ones(1,size(t,2));
@@ -69,6 +69,7 @@ omega = zeros(4,size(t,2));
 figure(1)
 hold on
 axis([-1 1 -1 1 0 3])
+axis tight
 for i = 1:size(t,2)
     quad.TrajectoryControl([x(i);y(i);z(i)],[dx(i);dy(i);dz(i)],[d2x(i);d2y(i);d2z(i)]);
     rot(:,i) = quad.rot;
@@ -110,7 +111,7 @@ a.keys
 syms T phi tta
 m = 0.3;
 g = 9.81;
-dtrans = [speed;0.2;0.3];
+dtrans = [freq;0.2;0.3];
 d2trans = [0.01;0.02;0.03];
 r = RotMat([phi tta 0]).'*(m*([0;0;g]+d2trans) + 0.25*dtrans)
 eq = [0;0;T] == r
@@ -132,6 +133,47 @@ rot(3) = 0;
 range = [-pi/2 pi/2;-pi/2 pi/2;-Inf Inf];
 eq = [0; 0; thrust] == RotMat([phi tta rot(3)]).'*(m*([0;0;g] + d2trans) + dragMat*dtrans)
 [phiVal, ttaVal, thrustVal]  = vpasolve(eq, [phi tta thrust], range)
+
+%%
+clc
+addpath(genpath('./Addition'));
+quadParams = ReadProperty("CloverProp.pdf");
+initState = zeros(12,1);
+initInput = zeros(4,1);
+simTime = 10;
+increment = 0.01;
+quad = Quadcopter(quadParams, initState, initInput);
+quad.Model3D('CloverAssemblyP.PLY');
+axis([-1 1 -1 1 -0.2 3])
+
+%% Trajectory
+t = 0:increment:simTime;
+amp = 0.5;
+freq = pi/2;
+x = amp*cos(freq*t);
+dx = -amp*freq*sin(freq*t);
+d2x = -amp*freq^2*cos(freq*t);
+y = amp*sin(freq*t);
+dy = amp*freq*cos(freq*t);
+d2y = -amp*freq^2*sin(freq*t);
+z = 0.03*t.^2;
+dz = 0.04*t;
+d2z = 0.04*ones(1,size(t,2));
+rot = zeros(3,size(t,2));
+drot = zeros(3,size(t,2));
+d2rot = zeros(3,size(t,2));
+omega = zeros(4,size(t,2));
+figure(1)
+hold on
+
+
+
+quad.TrajSim([x;y;z],simTime);
+
+
+
+
+
 
 
 

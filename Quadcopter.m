@@ -20,6 +20,7 @@ classdef Quadcopter < handle
         t           % current time stamp (percentage in total sim time)
         dt          % time interval
         tf          % total simulation time
+        simSize     % size of simulation trajectory
         
         m          % mass
         l          % arm length of quadcopter
@@ -47,8 +48,12 @@ classdef Quadcopter < handle
         
     end
     
-    properties (Access = private)
-        
+    properties (GetAccess = public, SetAccess = private)
+        aw = 7;
+    end
+    
+    properties (Access = protected)
+        ay = 8;
     end
     
     % Properties to construct 3D model
@@ -104,18 +109,18 @@ classdef Quadcopter < handle
     %% METHODS
     methods
         %% CONSTRUCTOR
-        function obj = Quadcopter(params, initStates, initControlInputs, simTime) %params, initStates, initControlInputs, gains, simTime
-            obj.t = 0.0;        % time stamp
-            obj.dt = 0.01;      % time interval
-            obj.tf = simTime;   % total simulation time
+        function obj = Quadcopter(params, initStates, initControlInputs) %params, initStates, initControlInputs, gains, simTime
+            %             obj.t = 0.0;        % time stamp
+            %             obj.dt = 0.01;      % time interval
+            %             obj.tf = simTime;   % total simulation time
             
             % Set physical parameters of the quadcopter
             % params is a container with 5 pairs
             obj.m = params('mass');
             obj.l = params('armLength');
             obj.I = [params('Ixx'),             0,            0;...
-                0, params('Iyy'),            0;...
-                0,             0, params('Izz')];
+                                 0, params('Iyy'),            0;...
+                                 0,             0, params('Izz')];
             
             % Initial state of quadcopter
             obj.q = initStates;
@@ -184,6 +189,56 @@ classdef Quadcopter < handle
         end
         
         
+        %% T
+        function TrajSim(obj, traj, simTime)
+            
+            % Initialise necessary variables
+            obj.simSize = size(traj,2);
+            obj.t = 0.0;        % time stamp
+            obj.dt = simTime/obj.simSize;      % time interval
+            obj.tf = simTime;   % total simulation time
+            
+            obj.trans = traj;
+            % Translational velocities and accelerations approximation
+            [obj.dtrans, obj.d2trans] = obj.ApproxDeriv(obj.trans);
+            
+            % Posture calculation
+            obj.TrajControl();
+            
+            % Body frame's angular velocities and accelerations approximation
+            [obj.drot, obj.d2rot] = obj.ApproxDeriv(obj.rot);
+            
+            % Moment calculation
+            obj.MotionEq();
+            
+            % Rotors' angular velocities calculation
+            obj.ControlInput();
+            
+            % Quadcopter simulation
+            for i = 1:obj.simSize
+                obj.MoveObj([obj.trans(:,i); obj.rot(:,i)]);
+                pause(10^-5);
+            end
+            
+        end
+        
+        
+        %% T
+        %         function TrajSimulation(obj, traj, dtraj, d2traj)
+        %
+        %             obj.t = 0.0;        % time stamp
+        %             obj.dt = 0.01;      % time interval
+        %             obj.tf = simTime;   % total simulation time
+        %
+        %         end
+        
+        
+        %% Approx
+        function [velo, acce] = ApproxDeriv(obj, attitude)
+            velo = [zeros(3,1), diff(attitude,1,2)/obj.dt];
+            acce = [zeros(3,1), diff(velo,1,2)/obj.dt];
+        end
+        
         %% TRAJECTORY CONTROL (EULER-LAGRANGE EQUATION) (LINEAR COMPONENT)
         function TrajectoryControl(obj, trans, dtrans, d2trans)
             
@@ -200,6 +255,15 @@ classdef Quadcopter < handle
         end
         
         
+        function TrajControl(obj)
+            syms thrust phi tta
+            obj.rot(3,obj.simSize) = 0;
+            range = [-pi/2 pi/2; -pi/2 pi/2; -Inf Inf];
+            for i = 1:obj.simSize
+                eq = [0; 0; thrust] == RotMat([phi tta obj.rot(3)]).'*(obj.m*(obj.g + obj.d2trans(:,i)) + obj.dragMat*obj.dtrans(:,i));
+                [obj.rot(1,i), obj.rot(2,i), obj.T(i)]  = vpasolve(eq, [phi, tta, thrust], range);
+            end
+        end
         
         %% EQUATION OF MOTION (EULER-LAGRANGE EQUATION) (ANGULAR COMPONENT)
         function EOM(obj, drot, d2rot)
@@ -217,16 +281,21 @@ classdef Quadcopter < handle
             
         end
         
+        %% EQUATION OF MOTION (EULER-LAGRANGE EQUATION) (ANGULAR COMPONENT)
+        function MotionEq(obj)
+            for i = 1:obj.simSize
+                obj.M(:,i) = Ja(obj.I, obj.rot(1,i), obj.rot(2,i))*obj.d2rot(:,i) + ...
+                    Coriolis(obj.I, obj.rot(:,i), obj.drot(:,i))*obj.drot(:,i);
+            end
+        end
+        
         
         %% CONTROL INPUT CALCULATION
         function ControlInput(obj)
-            
-            obj.omega = sqrt(obj.T/(4*obj.k) + [-1 0 -1; ...
-                                                 1 1 0; ...
-                                                -1 0 1; ...
-                                                 1 -1 0]*[(obj.M(3)/(4*obj.b)); (obj.M(1)/(2*obj.l*obj.k)); (obj.M(2)/(2*obj.l*obj.k))]);
-            
-            
+            for i = 1:obj.simSize
+                obj.omega(:,i) = sqrt(obj.T(i)/(4*obj.k) + [-1 0 -1; 1 1 0; -1 0 1; 1 -1 0] * ...
+                    [(obj.M(3,i)/(4*obj.b)); (obj.M(1,i)/(2*obj.l*obj.k)); (obj.M(2,i)/(2*obj.l*obj.k))]);
+            end
         end
         
         
@@ -372,12 +441,38 @@ classdef Quadcopter < handle
                 disp(ME_1);
             end
         end
+        
+        %%  MOVE 3D MODEL OF QUADCOPTER
+        function MoveObj(obj, pose)
+            obj.objPose = eye(4);
+            % Move forwards (facing in -y direction)
+            forwardTR = makehgtform('translate',pose(1:3));
+            % Random rotate about Z
+            zRotateTR = makehgtform('zrotate',pose(6));
+            yRotateTR = makehgtform('yrotate',pose(5));
+            xRotateTR = makehgtform('xrotate',pose(4));
+            % Move the pose forward and a slight and random rotation
+            obj.objPose = obj.objPose * forwardTR * xRotateTR * yRotateTR * zRotateTR;
+            updatedPoints = [obj.objPose * [obj.objVerts, ones(obj.objVertexCount,1)]']';
+            % Now update the Vertices
+            obj.objMesh_h.Vertices = updatedPoints(:,1:3);
+        end
     end
     
     
     methods
         
-        
+        %         function va = get.aw(obj)
+        %             va = obj.aw;
+        %         end
+        %
+        %         function va = get.omega(obj)
+        %             va = obj.omega;
+        %         end
+        %
+        %         function va = get.ay(obj)
+        %             va = obj.ay;
+        %         end
         
         function obj = untitled(inputArg1,inputArg2)
             %UNTITLED Construct an instance of this class
