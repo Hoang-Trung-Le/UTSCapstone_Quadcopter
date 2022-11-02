@@ -20,6 +20,7 @@ classdef Quadcopter < handle
       dt          % time interval
       tf          % total simulation time
       simSize     % size of simulation trajectory
+%       timeStamp   % simulation time stamp
 
       m          % mass
       l          % arm length of quadcopter
@@ -57,7 +58,7 @@ classdef Quadcopter < handle
 
 
    % Properties to construct 3D model
-   properties (Access = private)
+   properties (Access = public)
       model       % 3D model of quadcopter from .ply file
       objPose     % Pose of model
       objMesh_h   % Mesh of model
@@ -98,6 +99,7 @@ classdef Quadcopter < handle
          obj.t = 0.0;                           % time stamp
          obj.dt = simTime(2) - simTime(1);      % time interval
          obj.tf = simTime(end);                 % total simulation time
+%          obj.timeStamp = simTime;
 
          % Set physical parameters of the quadcopter
          % params is a container with 5 pairs
@@ -150,14 +152,14 @@ classdef Quadcopter < handle
       function TrajSimulation(obj, traj, dtraj, d2traj)
 
          obj.KPtrans = [2; 2; 2];
-         obj.KDtrans = [0.75;0.75;0.75];
+         obj.KDtrans = [2;2;0.75];
          obj.KDDtrans = [1;1;1];
 
-         obj.KItrans = [0;0;0];
+         obj.KItrans = [0.01;0.01;0];
          obj.zErrSum = zeros(3,obj.simSize);
 
-         obj.KProt = [3;3;3];
-         obj.KDrot = [0.75;0.75;0.75];
+         obj.KProt = [5;3;3];
+         obj.KDrot = [0.75;1;0.75];
 
          obj.zErrSum = 0;
 
@@ -262,7 +264,7 @@ classdef Quadcopter < handle
    %% CAD MODEL of QUADCOPTER
    methods (Access = public)
       %%  IMPORT 3D MODEL OF QUADCOPTER
-      function Model3D(obj, model)
+      function Model3D(obj, model, axes)
          obj.model = model;
          [f,v,data] = plyread(model,'tri');
          % Get vertex count
@@ -284,7 +286,7 @@ classdef Quadcopter < handle
                end
             end
             obj.objMesh_h = trisurf(f, obj.objVerts(:,1), obj.objVerts(:,2), obj.objVerts(:,3) ...
-               ,'FaceVertexCData',vertexColours,'EdgeColor','none','EdgeLighting','none');
+               ,'FaceVertexCData',vertexColours,'EdgeColor','none','EdgeLighting','none','Parent',axes);
          catch ME_1
             disp(ME_1);
          end
@@ -294,13 +296,13 @@ classdef Quadcopter < handle
       %%  MOVE 3D MODEL OF QUADCOPTER
       function MoveObj(obj, pose)
          obj.objPose = eye(4);
-         % Move forwards (facing in -y direction)
+         % Translational motion
          forwardTR = makehgtform('translate',pose(1:3));
-         % Random rotate about Z
+         % Rotational motion
          zRotateTR = makehgtform('zrotate',pose(6));
          yRotateTR = makehgtform('yrotate',pose(5));
          xRotateTR = makehgtform('xrotate',pose(4));
-         % Move the pose forward and a slight and random rotation
+         % Move the pose of object
          obj.objPose = obj.objPose * forwardTR * xRotateTR * yRotateTR * zRotateTR;
          updatedPoints = (obj.objPose * [obj.objVerts, ones(obj.objVertexCount,1)]')';
          % Now update the Vertices

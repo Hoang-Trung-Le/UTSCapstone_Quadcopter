@@ -7,9 +7,8 @@
 % Major: Mechatronic Engineering
 
 %% INITIALISATION
-... struggling
 clear;    clc;
-addpath(genpath('./Addition'));     % Include required files in separate folder
+addpath(genpath('./Support'));     % Include required files in separate folder
 
 quadParams = ReadProperty("CloverProp.pdf");
 initState = zeros(12,1);

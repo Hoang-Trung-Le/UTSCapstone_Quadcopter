@@ -13,8 +13,9 @@ classdef PlaceObj < handle
             % Get vertex count
             self.objVertexCount = size(v,1);
             % Move center point to origin
-            midPoint = sum(v)/self.objVertexCount;
-            self.objVerts = v - repmat(midPoint,self.objVertexCount,1);
+%             midPoint = sum(v)/self.objVertexCount;
+%             self.objVerts = v - repmat(midPoint,self.objVertexCount,1);
+            self.objVerts = v;
             % Create a transform to describe the location (at the origin, since it's centered
             self.objPose = eye(4);
             % Scale the colours to be 0-to-1 (they are originally 0-to-255

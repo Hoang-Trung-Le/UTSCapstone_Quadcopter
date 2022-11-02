@@ -8,7 +8,7 @@ function PlotTrajGen(a, t)
    title(fig,'Trajectory generation','FontWeight','bold')
    xlabel(fig,'Time (s)')
 
-   nexttile
+   nexttile;
    plot(t(1:s),a.jounce)
    ylim([min(a.jounce-0.5) max(a.jounce+0.5)]);
    ylabel('Jounce (m/s^4)')

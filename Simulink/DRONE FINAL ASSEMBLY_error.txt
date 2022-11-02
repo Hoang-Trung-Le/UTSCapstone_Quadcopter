@@ -1,8 +1,0 @@
-Constrained Instances: 'Spider top-1', 'Spider top-1', 'battery-1', 'battery-1'
-Constraint Name: Width1
-Error Details: Constraint is not supported. The constraint has been ignored.
----------------------------------------------------------------------------------
-Constrained Instances: 'Spider top-1', 'Spider top-1', 'battery-1', 'battery-1'
-Constraint Name: Width2
-Error Details: Constraint is not supported. The constraint has been ignored.
----------------------------------------------------------------------------------

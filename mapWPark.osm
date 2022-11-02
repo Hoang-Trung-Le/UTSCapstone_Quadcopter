@@ -7468,7 +7468,7 @@
   <nd ref="20958877"/>
   <nd ref="8003006275"/>
   <nd ref="3296509495"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="highway" v="motorway"/>
   <tag k="lanes" v="3"/>
   <tag k="layer" v="2"/>
@@ -7559,7 +7559,7 @@
   <nd ref="3892714638"/>
   <nd ref="26362585"/>
   <nd ref="600645149"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="destination" v="Glebe;Wentworth Park;Pyrmont;Darling Harbor;Fish Market;The Star"/>
   <tag k="destination:street" v="Pyrmont Bridge Road"/>
   <tag k="highway" v="motorway_link"/>
@@ -7601,7 +7601,7 @@
   <nd ref="26627307"/>
   <nd ref="3921421048"/>
   <nd ref="26627309"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="highway" v="motorway_link"/>
   <tag k="lanes" v="2"/>
   <tag k="layer" v="2"/>
@@ -7617,7 +7617,7 @@
   <nd ref="3923030375"/>
   <nd ref="8003006264"/>
   <nd ref="61092789"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="destination:lanes" v="none|none|Cross City Tunnel"/>
   <tag k="highway" v="motorway_link"/>
   <tag k="lanes" v="3"/>
@@ -7660,8 +7660,8 @@
   <nd ref="6634821233"/>
   <nd ref="13100802"/>
   <nd ref="6634821234"/>
-  <tag k="bridge" v="viaduct"/>
-  <tag k="bridge:structure" v="arch"/>
+  <tag k="building" v="viaduct"/>
+  <tag k="building:structure" v="arch"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -7946,7 +7946,7 @@
   <nd ref="3921428759"/>
   <nd ref="26362995"/>
   <nd ref="26362584"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="highway" v="motorway"/>
   <tag k="lanes" v="4"/>
   <tag k="layer" v="2"/>
@@ -7971,7 +7971,7 @@
   <nd ref="3921428761"/>
   <nd ref="26627292"/>
   <nd ref="26627293"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="highway" v="motorway_link"/>
   <tag k="lanes" v="2"/>
   <tag k="layer" v="1"/>
@@ -8406,7 +8406,7 @@
   <nd ref="1479669220"/>
   <nd ref="1677883660"/>
   <tag k="bicycle" v="designated"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="1"/>
   <tag k="surface" v="asphalt"/>
@@ -8433,7 +8433,7 @@
   <nd ref="8477172019"/>
   <nd ref="1479669220"/>
   <tag k="bicycle" v="designated"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="2"/>
   <tag k="surface" v="asphalt"/>
@@ -8541,7 +8541,7 @@
   <nd ref="3892714644"/>
   <nd ref="3892714642"/>
   <nd ref="20958925"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="highway" v="motorway"/>
   <tag k="lanes" v="3"/>
   <tag k="layer" v="2"/>
@@ -8662,7 +8662,7 @@
  <way id="172324378" visible="true" version="3" changeset="41053796" timestamp="2016-07-27T06:04:20Z" user="ksdowns" uid="4272183">
   <nd ref="1832329716"/>
   <nd ref="1832329719"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -8688,8 +8688,8 @@
   <nd ref="1832329756"/>
   <nd ref="1832329759"/>
   <nd ref="1832329760"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="bridge:structure" v="beam"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:structure" v="beam"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -9192,8 +9192,8 @@
  <way id="172886475" visible="true" version="5" changeset="103369207" timestamp="2021-04-22T01:01:48Z" user="pza" uid="28177">
   <nd ref="1832329743"/>
   <nd ref="1832329746"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="bridge:structure" v="beam"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:structure" v="beam"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -9258,7 +9258,7 @@
  <way id="173155083" visible="true" version="3" changeset="37264333" timestamp="2016-02-17T11:16:29Z" user="NilbogAus" uid="9477">
   <nd ref="1839821058"/>
   <nd ref="1839821046"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="1"/>
   <tag k="name" v="Glebe Tram Stop"/>
@@ -9813,7 +9813,7 @@
  <way id="179207145" visible="true" version="8" changeset="77559754" timestamp="2019-11-26T08:09:49Z" user="Fluffy89502" uid="10165657">
   <nd ref="1895566789"/>
   <nd ref="1895566778"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="motorway_link"/>
   <tag k="layer" v="1"/>
   <tag k="maxspeed" v="60"/>
@@ -9838,7 +9838,7 @@
   <nd ref="1853796453"/>
   <nd ref="1853796455"/>
   <nd ref="1853796456"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="highway" v="motorway"/>
   <tag k="lanes" v="3"/>
   <tag k="layer" v="2"/>
@@ -9864,7 +9864,7 @@
   <nd ref="1855070229"/>
   <nd ref="3921428825"/>
   <nd ref="1895566789"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="motorway_link"/>
   <tag k="lanes" v="2"/>
   <tag k="layer" v="1"/>
@@ -9958,7 +9958,7 @@
   <nd ref="8003006259"/>
   <nd ref="8003006258"/>
   <nd ref="1853796456"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="highway" v="motorway_link"/>
   <tag k="lanes" v="1"/>
   <tag k="layer" v="2"/>
@@ -9983,7 +9983,7 @@
   <nd ref="1833169115"/>
   <nd ref="26635703"/>
   <nd ref="2347313219"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="primary"/>
   <tag k="layer" v="1"/>
   <tag k="name" v="Pier Street"/>
@@ -10027,7 +10027,7 @@
   <nd ref="17395614"/>
   <nd ref="26625419"/>
   <nd ref="1844861836"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="destination" v="City North;Harbour Bridge"/>
   <tag k="destination:ref" v="M1"/>
   <tag k="highway" v="motorway"/>
@@ -10059,7 +10059,7 @@
   <nd ref="2524935398"/>
   <tag k="access" v="no"/>
   <tag k="bicycle" v="no"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="cycleway" v="no"/>
   <tag k="highway" v="service"/>
   <tag k="lanes" v="1"/>
@@ -10082,7 +10082,7 @@
   <nd ref="2524935375"/>
   <tag k="access" v="no"/>
   <tag k="bicycle" v="no"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="cycleway" v="no"/>
   <tag k="highway" v="service"/>
   <tag k="lanes" v="1"/>
@@ -10511,8 +10511,8 @@
   <nd ref="3200901708"/>
   <nd ref="3200901706"/>
   <nd ref="8657651002"/>
-  <tag k="bridge" v="viaduct"/>
-  <tag k="bridge:structure" v="arch"/>
+  <tag k="building" v="viaduct"/>
+  <tag k="building:structure" v="arch"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -10566,8 +10566,8 @@
  <way id="314054691" visible="true" version="3" changeset="103369207" timestamp="2021-04-22T01:01:48Z" user="pza" uid="28177">
   <nd ref="3200901748"/>
   <nd ref="3200901747"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="bridge:structure" v="beam"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:structure" v="beam"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -10579,7 +10579,7 @@
  <way id="314054693" visible="true" version="2" changeset="41053796" timestamp="2016-07-27T06:04:18Z" user="ksdowns" uid="4272183">
   <nd ref="3200901741"/>
   <nd ref="3200901740"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -10615,8 +10615,8 @@
   <nd ref="3200901757"/>
   <nd ref="3200901758"/>
   <nd ref="3200901754"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="bridge:structure" v="beam"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:structure" v="beam"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -10783,7 +10783,7 @@
   <nd ref="8003006266"/>
   <nd ref="8003006265"/>
   <nd ref="26627317"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="destination:lanes" v="none|none|Cross City Tunnel"/>
   <tag k="highway" v="motorway_link"/>
   <tag k="lanes" v="3"/>
@@ -10999,7 +10999,7 @@
   <nd ref="8609628594"/>
   <nd ref="8570711342"/>
   <nd ref="3878916704"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="1"/>
   <tag k="surface" v="paved"/>
@@ -11065,7 +11065,7 @@
   <nd ref="1833169122"/>
   <nd ref="2347313390"/>
   <nd ref="2347313208"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="primary"/>
   <tag k="layer" v="1"/>
   <tag k="name" v="Pier Street"/>
@@ -11077,7 +11077,7 @@
   <nd ref="26627284"/>
   <nd ref="3921428814"/>
   <nd ref="26627285"/>
-  <tag k="bridge" v="viaduct"/>
+  <tag k="building" v="viaduct"/>
   <tag k="highway" v="motorway"/>
   <tag k="lanes" v="3"/>
   <tag k="layer" v="2"/>
@@ -15834,7 +15834,7 @@
   <nd ref="6371447467"/>
   <nd ref="6371447468"/>
   <nd ref="6371447470"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="1"/>
  </way>
@@ -15856,7 +15856,7 @@
   <nd ref="6371447473"/>
   <nd ref="6371447472"/>
   <nd ref="6371447471"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="1"/>
  </way>
@@ -16104,7 +16104,7 @@
   <nd ref="2458659810"/>
   <nd ref="2458659811"/>
   <nd ref="2458659812"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="motorway_link"/>
   <tag k="lanes" v="1"/>
   <tag k="layer" v="1"/>
@@ -16270,7 +16270,7 @@
   <nd ref="6819844168"/>
   <nd ref="6819844172"/>
   <nd ref="6819844171"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="1"/>
   <tag k="opening_hours" v="sunrise-sunset"/>
@@ -18170,7 +18170,7 @@
  <way id="912552384" visible="true" version="1" changeset="100231155" timestamp="2021-03-01T21:22:48Z" user="minus34" uid="2891701">
   <nd ref="8477172018"/>
   <nd ref="1479669220"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="1"/>
  </way>
@@ -18180,7 +18180,7 @@
   <nd ref="8477172022"/>
   <nd ref="8477172023"/>
   <nd ref="8477201817"/>
-  <tag k="bridge" v="yes"/>
+  <tag k="building" v="yes"/>
   <tag k="highway" v="footway"/>
   <tag k="layer" v="1"/>
  </way>
@@ -18567,8 +18567,8 @@
  <way id="934134197" visible="true" version="1" changeset="103448422" timestamp="2021-04-23T04:34:59Z" user="pza" uid="28177">
   <nd ref="6634821234"/>
   <nd ref="1832329706"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="bridge:structure" v="truss"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:structure" v="truss"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -18580,8 +18580,8 @@
  <way id="934134198" visible="true" version="1" changeset="103448422" timestamp="2021-04-23T04:34:59Z" user="pza" uid="28177">
   <nd ref="3200901736"/>
   <nd ref="3200901735"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="bridge:structure" v="truss"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:structure" v="truss"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -18593,8 +18593,8 @@
  <way id="934134199" visible="true" version="1" changeset="103448422" timestamp="2021-04-23T04:34:59Z" user="pza" uid="28177">
   <nd ref="26627210"/>
   <nd ref="13100773"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="bridge:structure" v="beam"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:structure" v="beam"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>
@@ -18606,8 +18606,8 @@
  <way id="934134200" visible="true" version="1" changeset="103448422" timestamp="2021-04-23T04:34:59Z" user="pza" uid="28177">
   <nd ref="8657651002"/>
   <nd ref="3200901702"/>
-  <tag k="bridge" v="yes"/>
-  <tag k="bridge:structure" v="beam"/>
+  <tag k="building" v="yes"/>
+  <tag k="building:structure" v="beam"/>
   <tag k="electrified" v="contact_line"/>
   <tag k="frequency" v="0"/>
   <tag k="gauge" v="1435"/>

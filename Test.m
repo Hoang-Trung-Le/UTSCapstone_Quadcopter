@@ -351,14 +351,14 @@ close all;
 inc = 0.02;
 timeEnd = 15;
 t = 0:inc:timeEnd;
-a = TrajectoryGeneration(30,3,t); %pos>=6, inc = 0.01 (must)
-a1 = TrajectoryGeneration(7,1,t);
+a = TrajectoryGeneration(5,3,t); %pos>=6, inc = 0.01 (must)
+a1 = TrajectoryGeneration(5,1,t);
 s = size(a.acce,2);
 s1 = size(a1.acce,2);
 %%
-addpath(genpath('./Addition'));
+addpath(genpath('./Support'));
 quadParams = ReadProperty("CloverProp.pdf");
-initState = [0; 0; 0; zeros(9,1)];
+initState = [0; 0; 30; zeros(9,1)];
 initInput = zeros(4,1);
 
 quad = Quadcopter(quadParams, initState, initInput, t);
@@ -368,12 +368,12 @@ quad = Quadcopter(quadParams, initState, initInput, t);
 % z = [(30-a.pos), (30-a.pos(end))*ones(1,size(t,2)-s)];
 % dz = [a.velo, a.velo(end)*ones(1,size(t,2)-s)];
 % d2z = [a.acce, a.acce(end)*ones(1,size(t,2)-s)];
-% z = 0*ones(1,size(t,2));
-% dz = 0*t;
-% d2z = 0*t;
-z = [a.pos, a.pos(end)*ones(1,size(t,2)-s)];
-dz = [a.velo, a.velo(end)*ones(1,size(t,2)-s)];
-d2z = [a.acce, a.acce(end)*ones(1,size(t,2)-s)];
+z = 30*ones(1,size(t,2));
+dz = 0*t;
+d2z = 0*t;
+% z = [a.pos, a.pos(end)*ones(1,size(t,2)-s)];
+% dz = [a.velo, a.velo(end)*ones(1,size(t,2)-s)];
+% d2z = [a.acce, a.acce(end)*ones(1,size(t,2)-s)];
 
 x = [a1.pos, a1.pos(end)*ones(1,size(t,2)-s1)];
 dx = [a1.velo, a1.velo(end)*ones(1,size(t,2)-s1)];
@@ -391,7 +391,7 @@ d2rot = zeros(3,size(t,2));
 %%
 close all
 quad.TrajSimulation([x;y;z],[dx;dy;dz],[d2x;d2y;d2z]);
-
+disp('Done');
 PlotTrajGen(a1,t);
 
 figure(2)
@@ -486,8 +486,8 @@ figure(6)
 fig = tiledlayout(6,6,'TileSpacing','Compact');
 title(fig,'Trajectory','FontWeight','bold')
 xlabel(fig,'Time (s)')
-nexttile(1,[6 5])
-quad.Model3D('CloverAssemblyP.PLY');
+ax = nexttile(1,[6 5]);
+quad.Model3D('CloverAssemblyP.PLY',ax);
 axis([-0.5 8 -1 1 -0.1 30])
 % axis equal
 hold on
@@ -502,7 +502,7 @@ for i = 1:20:size(t,2)
    nexttile(1,[6 5])
    quad.Animation(i);
    ylabel('Position (m)')
-   zlim([(quad.transCur(3,i)-1) (quad.transCur(3,i)+1)])
+%    zlim([(quad.transCur(3,i)-1) (quad.transCur(3,i)+1)])
 %    axis([-0.5 0.5 -0.5 0.5])
    camlight(hLgt,'right')
    pause(0.01)
@@ -547,9 +547,11 @@ nexttile(1,[6 5])
 % axis([-0.5 0.5 -0.5 0.5 -0.2 30])
    
 %%
-scene1 = uavScenario(ReferenceLocation=[40.707088 -74.012146 0]); %-33.876 151.19
-addMesh(scene1,"terrain",{"gmted2010",[-500 500],[-500 500]},[0.5 0.5 0.5]);
-addMesh(scene1,"buildings",{"manhattan.osm",[-500 500],[-500 500],"auto"},[0 1 0]);
+clear;clc;
+scene1 = uavScenario(ReferenceLocation=[-33.876 151.19 0]); %-33.876 151.19 %40.707088 -74.012146
+% addMesh(scene1,"terrain",{"gmted2010",[-500 500],[-500 500]},[0.5 0.5 0.5]);
+% addMesh(scene1,"buildings",{"Copy_of_mapWPark.osm",[-500 500],[-500 500],"auto"},[1 0 0]);
+addMesh(scene1,"buildings",{"bridge.osm",[-5500 5500],[-5500 5500],"auto"},[0 1 0]);
 show3D(scene1)
 %%
 t=0:0.04:10;
